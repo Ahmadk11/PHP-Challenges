@@ -41,7 +41,12 @@ class participants {
         $graduation_status = $graduation_status ?? $this->graduation_status;
 
         return new Participant($name, $email, $profile_picture, $batch, $graduation_status);
-    }    
+    }
+
+    public function mark_as_graduated() {
+        $this->graduation_status = true;
+        return $this;
+    }
 
 }
 
