@@ -32,6 +32,30 @@ class Node {
     }
 }
 
+class LinkedList {
+
+    public $head;
+
+    public function __construct() {
+        $this->head = null;
+    }
+
+    public function addNode($id) {
+        $newNode = new Node($id);
+
+        if ($this->head === null) {
+            $this->head = $newNode;
+
+        } else {
+            
+            $current = $this->head;
+            while ($current->next !== null) {
+                $current = $current->next;
+            }
+            $current->next = $newNode;
+        }
+    }
+}
 
 
 
