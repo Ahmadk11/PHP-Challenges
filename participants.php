@@ -53,6 +53,18 @@ class participants {
         return 'participant_' . random_int(1000, 100000);
     }
 
+    public function switch_batch($new_batch) {
+        switch($new_batch) {
+            case "FSE":
+            case "UIX":
+            case "FCS":
+                $this->batch = $new_batch;
+                return $this;
+            default:
+                throw new Exception("Invalid batch: " . $new_batch);
+        }
+    }
+
 }
 
 
