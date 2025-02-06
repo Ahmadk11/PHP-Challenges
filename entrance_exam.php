@@ -22,6 +22,19 @@ $students_exam = [
     ]
 ];
 
+class Node {
+    public $id;
+    public $next;
+
+    public function __construct($id) {
+        $this->id = $id;
+        $this->next = null;
+    }
+}
+
+
+
+
 
 
 ?>
