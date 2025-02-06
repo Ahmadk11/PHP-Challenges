@@ -17,6 +17,12 @@ class participants {
         $this->batch = $batch;
         $this->graduation_status = $graduation_status;
     }
+
+    public static function validate_email($email){
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+
 }
+
 
 ?>
