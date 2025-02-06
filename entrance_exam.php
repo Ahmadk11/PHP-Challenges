@@ -55,7 +55,21 @@ class LinkedList {
             $current->next = $newNode;
         }
     }
+
+    public function printList() {
+        $current = $this->head;
+        if ($current === null) {
+            echo "No students in interview phase.\n";
+        } else {
+            while ($current !== null) {
+                echo "Student ID: " . $current->id . "\n";
+                $current = $current->next;
+            }
+        }
+    }
 }
+
+
 
 
 
