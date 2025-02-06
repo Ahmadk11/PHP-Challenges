@@ -31,11 +31,17 @@ class participants {
         }
     }
 
+    public function update_with($id = null, $name = null, $email = null, $profile_picture = null, $batch = null, $graduation_status = null) {
+        
+        $id = $id ?? $this->$id;
+        $name = $name ?? $this->name;
+        $email = $email ?? $this->email;
+        $profile_picture = $profile_picture ?? $this->profile_picture;
+        $batch = $batch ?? $this->batch;
+        $graduation_status = $graduation_status ?? $this->graduation_status;
 
-
-    
-    
-
+        return new Participant($name, $email, $profile_picture, $batch, $graduation_status);
+    }    
 
 }
 
