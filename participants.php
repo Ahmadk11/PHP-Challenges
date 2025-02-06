@@ -48,6 +48,11 @@ class participants {
         return $this;
     }
 
+    public static function generate_id() {
+
+        return 'participant_' . random_int(1000, 100000);
+    }
+
 }
 
 
