@@ -22,6 +22,21 @@ class participants {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
+    public static function validate_batch($batch) {
+        $valid_batches = ["FSE", "UIX", "FCS"];
+        if (in_array($batch, $valid_batches)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
+    
+    
+
+
 }
 
 
