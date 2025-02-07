@@ -82,6 +82,16 @@ function addStudent(&$students, $id, $name, $email, $exam_score) {
     $students[$id] = $student;
 }
 
+function validateAndAddToInterview(&$students, &$interviewList) {
+    $passing_score = 70;
+
+    foreach ($students as $student) {
+        if ($student['exam_score'] >= $passing_score) {
+            $interviewList->addNode($student['id']);
+        }
+    }
+}
+
 
 
 
