@@ -92,6 +92,10 @@ function validateAndAddToInterview(&$students, &$interviewList) {
     }
 }
 
+foreach ($students_exam as $student) {
+    addStudent($students_exam, $student['id'], $student['name'], $student['email'], $student['exam_score']);
+}
+
 
 
 
