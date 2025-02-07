@@ -71,7 +71,16 @@ class LinkedList {
 
 $interviewList = new LinkedList();
 
+function addStudent(&$students, $id, $name, $email, $exam_score) {
+    $student = [
+        'id' => $id,
+        'name' => $name,
+        'email' => $email,
+        'exam_score' => $exam_score
+    ];
 
+    $students[$id] = $student;
+}
 
 
 
